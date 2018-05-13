@@ -1,15 +1,7 @@
 #include <stdio.h>
+#include "numberList.h"
 
-
-void generateRandomList();
-
-class numberList
-{
-
-
-};
-
-
+using namespace std;
 
 
 
@@ -17,5 +9,5 @@ int main()
 {
 
 
-
+  return 0;
 }
