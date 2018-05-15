@@ -78,8 +78,8 @@ int basicSearch(int* list, unsigned int list_length, int search_term)
 int search1(int* list, unsigned int list_length, int search_term)
 {
   unsigned int i;
-  int pointer = list_length / 2;
-  for (i = 0; i < list_length / 2 + 1; i++)
+  int pointer = (list_length - 1) / 2;
+  for (i = 0; i < (list_length - 1) / 2; i++)
   {
     if (list[pointer] == search_term)
     {
@@ -87,11 +87,11 @@ int search1(int* list, unsigned int list_length, int search_term)
     }
     else if (list[pointer] > search_term)
     {
-      pointer -= list_length / (pow(2, i + 2));
+      pointer -= (list_length - 1) / (pow(2, i + 2));
     }
     else
     {
-      pointer += list_length / (pow(2, i + 2)) + 1;
+      pointer += (list_length - 1)/ (pow(2, i + 2)) + 1;
     }
   }
   return -1;
